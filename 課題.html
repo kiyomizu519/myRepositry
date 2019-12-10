@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>自己課題</title>
+        <style>
+            #div1{
+                transform: ;
+                width: 200px;
+                height: 200px;
+                }
+
+        </style>
+    </head>
+    <body>
+        <div align=center><h1>反応速度測定</h1>
+        <br>
+        <h2>ここではマウスのクリックの速度を判定します。</h2>
+        <br><br>
+        
+        <p>
+            <button onclick="start();"><h2>　　開始　　</h2></button>
+        </p>
+        <p id="go"></p>
+        <p id="T1"></p>
+        <p id="T2"></p>
+        <p id="T3"></p>
+        <br><br>
+        <canvas id="cv" width="500" height="500"></canvas>
+        </div>
+        <script>
+            
+            const go = document.getElementById("go");
+
+            
+            function start(){
+                var ctx = document.getElementById("cv").getContext("2d");
+                ctx.beginPath();
+                ctx.fillStyle= "yellow";
+                ctx.arc(120, 120, 100, 0, Math.PI*2, true);
+                ctx.fill();
+                await(300);
+                ctx.fillStyle= "red";
+                ctx.fill();
+                }
+            
+            setTimeout("red()",3000)
+
+
+
+        </script>
+
+    </body>
+</html>
